@@ -11,13 +11,13 @@ const seed = async () => {
   const snippets = await Snippet.bulkCreate(snippetData);
   // associate some data
   await Promise.all([
-    user.addShow(snippets[0]),
-    user.addShow(snippets[1]),
-    user.addShow(snippets[2]),
-    user.addShow(snippets[3])
+    user.addSnippet(snippets[0]),
+    user.addSnippet(snippets[1]),
+    user.addSnippet(snippets[2]),
+    user.addSnippet(snippets[3])
   ])
 
-  console.log('Shows and User database info populated!')
+  console.log('Snippet and User database info populated!')
 }
 
 // export my seed function
